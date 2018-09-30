@@ -48,11 +48,12 @@ app.get('/about', (req, res) => {
   });
 });
 
-app.get('/bad', (req, res) => {
-  res.send({
-    message: 'Bad Page. Nothing here',
-    Error: 'Error 619'
-  })
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Project Page',
+    message: 'Your Projects'
+
+  });
 });
 
 app.listen(port, () => {
